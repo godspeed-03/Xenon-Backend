@@ -1,6 +1,6 @@
 import User from "../models/User.model.js";
 
-export const generateRefreshTokenAndAccessToken = async ( Id, userType ) => {
+export const generateRefreshTokenAndAccessToken = async ( Id ) => {
 
   const user =  await User.findById( Id );
 
