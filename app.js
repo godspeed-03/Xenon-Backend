@@ -7,7 +7,7 @@ const app = express();
 
 
 const corsOptions = {
-  origin: 'https://xenon-client.vercel.app/',
+  origin: 'https://xenon-client.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true, 
