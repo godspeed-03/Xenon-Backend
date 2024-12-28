@@ -1,9 +1,7 @@
 import { Router } from "express";
 import {
   login,
-  logout,
   register,
-  getUser,
   savequery,
 } from "../controllers/User.controller.js";
 import { upload } from "../middleware/multer.middleware.js";
@@ -24,9 +22,9 @@ userRouter.route( "/register" ).post(
 );
 userRouter.route( "/login" ).post( login );
 
-userRouter.route( "/logout" ).post( verifyUserJWT, logout ); //  secure
+// userRouter.route( "/logout" ).post( verifyUserJWT, logout ); //  secure
 
-userRouter.route( "/userdata" ).get( verifyUserJWT, getUser ); //  secure
+// userRouter.route( "/userdata" ).get( verifyUserJWT, getUser ); //  secure
 
 
 
