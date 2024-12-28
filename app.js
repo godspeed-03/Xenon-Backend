@@ -6,13 +6,14 @@ import morgan from "morgan";
 const app = express();
 
 
-const corsOptions = {
-  origin: 'https://xenon.nxtdev.in/', 
-  credentials: true, 
-};
-
-// Enable CORS with the defined options
-app.use(cors(corsOptions));
+app.use(
+  cors( {
+    origin: [
+      process.env.FRONTEND_URL_TEST,
+    ],
+    credentials: true,
+  } )
+);
 app.use( cookieParser() );
 app.use( express.json( { limit: "16kb" } ) );
 app.use(
