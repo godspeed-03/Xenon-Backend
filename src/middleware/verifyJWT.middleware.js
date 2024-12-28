@@ -4,8 +4,7 @@ import { ApiError } from "../utils/ApiError.js";
 
 export const verifyUserJWT = async ( req, res, next ) => {
   try {
-    const token = req.cookies.userAccessToken;
-
+    const token = req.header( "Authorization" ).replace( "Bearer ", "" );
     if ( !token ) {
       throw new ApiError( 406, "Auth Identity is required" );
     }
