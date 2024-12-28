@@ -5,24 +5,12 @@ import morgan from "morgan";
 
 const app = express();
 
-// app.use(
-//   cors( {
-//     origin: [
-//       process.env.FRONTEND_URL_TEST,
-//       process.env.FRONTEND_URL_DEV,
-//       process.env.FRONTEND_URL_DEV1,
-//       process.env.FRONTEND_URL_DEV2,
-//       process.env.ADMIN_URL_DEV,
-//       process.env.ADMIN_URL_DEV1,
-//     ],
-//     credentials: true,
-//   } )
-// );
+
 const corsOptions = {
-  origin: 'http://localhost:5500', // Allow requests from this origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
-  credentials: true, // Allow cookies to be included in requests
+  origin: 'https://xenon-client.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+  allowedHeaders: ['Content-Type', 'Authorization'], 
+  credentials: true, 
 };
 
 // Enable CORS with the defined options
