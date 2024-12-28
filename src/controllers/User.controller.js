@@ -105,7 +105,7 @@ export const login = async (req, res, next) => {
         new ApiResponse(
           203,
           {
-            userEmail: user.email,
+            email: user.email,
           },
           "User is not verified, Please verify"
         )
