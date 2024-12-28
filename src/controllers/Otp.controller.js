@@ -45,7 +45,7 @@ export const verifyuserOtp = async ( req, res, next ) => {
       .status( 200 )
       .cookie( "userRefreshToken", generatedrefreshToken, refreshTokenOptions )
       .cookie( "userAccessToken", generatedaccessToken, accessTokenOptions )
-      .json( new ApiResponse( 200, loggedInUser, "User verified successfully" ) );
+      .json( new ApiResponse( 200, {loggedInUser, generatedaccessToken, generatedrefreshToken}, "User verified successfully" ) );
   } catch ( err ) {
     next( err );
   }

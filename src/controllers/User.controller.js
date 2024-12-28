@@ -134,9 +134,7 @@ export const login = async (req, res, next) => {
         .json(
           new ApiResponse(
             200,
-            {
-              user: loggedInUser,
-            },
+            { loggedInUser, generatedaccessToken, generatedrefreshToken },
             "User logged in successfully"
           )
         );
